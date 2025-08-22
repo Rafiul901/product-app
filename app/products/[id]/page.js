@@ -1,13 +1,13 @@
 // app/products/[id]/page.js
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, ShoppingCart } from 'lucide-react'
 import { getProductById } from '@/app/components/lib/data'
 
+export default async function ProductDetailPage({ params }) {
+  const product = await getProductById(params.id) // make async if needed
 
-export default function ProductDetailPage({ params }) {
-  const product = getProductById(params.id)
-  
   if (!product) {
     notFound()
   }
@@ -16,43 +16,38 @@ export default function ProductDetailPage({ params }) {
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
-        <Link 
+        <Link
           href="/products"
           className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-800 mb-8"
         >
           <ArrowLeft className="h-4 w-4" />
           <span>Back to Products</span>
         </Link>
-        
+
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
             {/* Product Image */}
-            <div className="aspect-w-1 aspect-h-1">
-              <img
+            <div className="relative w-full h-96 bg-gray-200 rounded-lg">
+              <Image
                 src={product.image}
                 alt={product.name}
-                className="w-full h-96 object-cover object-center rounded-lg"
+                fill
+                className="object-cover object-center rounded-lg"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            
+
             {/* Product Info */}
             <div className="flex flex-col justify-between">
               <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-4">
-                  {product.name}
-                </h1>
-                
-                <div className="text-4xl font-bold text-blue-600 mb-6">
-                  ${product.price}
-                </div>
-                
+                <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+                <div className="text-4xl font-bold text-blue-600 mb-6">${product.price}</div>
+
                 <div className="mb-6">
                   <h2 className="text-lg font-semibold text-gray-900 mb-2">Description</h2>
-                  <p className="text-gray-600 leading-relaxed">
-                    {product.details}
-                  </p>
+                  <p className="text-gray-600 leading-relaxed">{product.details}</p>
                 </div>
-                
+
                 {product.features && product.features.length > 0 && (
                   <div className="mb-8">
                     <h2 className="text-lg font-semibold text-gray-900 mb-3">Features</h2>
@@ -67,7 +62,7 @@ export default function ProductDetailPage({ params }) {
                   </div>
                 )}
               </div>
-              
+
               {/* Action Buttons */}
               <div className="space-y-4">
                 <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg text-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">

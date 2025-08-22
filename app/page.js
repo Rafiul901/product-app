@@ -1,3 +1,4 @@
+// app/page.js
 import Link from 'next/link'
 import ProductCard from './components/ProductCard'
 import Footer from './components/Footer'
@@ -32,10 +33,11 @@ export default async function HomePage() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/products">
-              <a className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
-                View All Products
-              </a>
+            <Link
+              href="/products"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            >
+              View All Products
             </Link>
           </div>
         </div>
