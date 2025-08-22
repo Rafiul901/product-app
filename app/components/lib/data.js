@@ -5,7 +5,7 @@ export let products = [
     name: "Wireless Headphones",
     description: "High-quality wireless headphones with noise cancellation",
     price: 199.99,
-    image: "https://i.ibb.co.com/MDZSRgr4/pexels-photo-610945.jpg",
+    image: "https://i.ibb.co/MDZSRgr4/pexels-photo-610945.jpg",
     details: "Premium wireless headphones featuring advanced noise cancellation technology, 30-hour battery life, and crystal-clear audio quality. Perfect for music lovers and professionals.",
     features: ["Noise Cancellation", "30hr Battery", "Wireless", "Premium Audio"]
   },
@@ -23,7 +23,7 @@ export let products = [
     name: "Laptop Stand",
     description: "Ergonomic laptop stand for better posture",
     price: 79.99,
-    image: "https://i.ibb.co.com/DdxCvw6/pexels-photo-13766004.jpg",
+    image: "https://i.ibb.co/DdxCvw6/pexels-photo-13766004.jpg",
     details: "Adjustable aluminum laptop stand designed to improve posture and reduce neck strain. Compatible with all laptop sizes and featuring excellent heat dissipation.",
     features: ["Adjustable Height", "Aluminum Build", "Heat Dissipation", "Universal Compatibility"]
   },
@@ -32,7 +32,7 @@ export let products = [
   name: "Bluetooth Speaker",
   description: "Portable Bluetooth speaker with deep bass",
   price: 149.99,
-  image: "https://i.ibb.co.com/4nWSP4wZ/pexels-photo-1279365.jpg",
+  image: "https://i.ibb.co/4nWSP4wZ/pexels-photo-1279365.jpg",
   details: "Compact and powerful Bluetooth speaker delivering deep bass and crystal-clear sound. Up to 12 hours of playtime, waterproof, and ideal for indoor and outdoor use.",
   features: ["Bluetooth 5.0", "Waterproof", "12hr Battery", "Deep Bass"]
 },
@@ -41,7 +41,7 @@ export let products = [
   name: "Gaming Mouse",
   description: "High-precision RGB gaming mouse",
   price: 59.99,
-  image: "https://i.ibb.co.com/zhDgjc0R/pexels-photo-2115256.jpg",
+  image: "https://i.ibb.co/zhDgjc0R/pexels-photo-2115256.jpg",
   details: "Ergonomic gaming mouse with adjustable DPI, customizable RGB lighting, and responsive buttons. Designed for gamers seeking accuracy and comfort during long gaming sessions.",
   features: ["Adjustable DPI", "RGB Lighting", "Ergonomic", "High Precision"]
 },
